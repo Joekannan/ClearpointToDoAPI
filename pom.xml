@@ -136,9 +136,30 @@
                       <goals>
                           <goal>aggregate</goal>
                       </goals>
+		      <configuration>
+			  <outputDirectory>${basedir}/reports/${current.time}</outputDirectory>
+		      </configuration>
                    </execution>
                </executions>
            </plugin>
+	   <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>build-helper-maven-plugin</artifactId>
+		<executions>
+			<execution>
+				<id>current-time</id>
+				<phase>validate</phase>
+				<goals>
+					<goal>timestamp-property</goal>
+				</goals>
+				<configuration>
+					<name>current.time</name>
+					<pattern>dd-MM-yyyy_HH-mm-ss</pattern>
+					<timeZone>NZT</timeZone>
+				</configuration>
+			</execution>
+		</executions>
+	   </plugin>
         </plugins>
     </build>
 
