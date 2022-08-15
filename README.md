@@ -18,5 +18,5 @@ For a new story
 
 # Reporting
 - This project uses the Serenity reports which acts as a living documentation of results.
-- After running the **"mvn clean verify", the report is available at **\Clearpoint\reports\timestamp** folder if the test is initiated from the command prompt.
+- After running the **"mvn clean verify", the report is available at **\ClearpointToDoAPI-master\reports\timestamp** folder if the test is initiated from the command prompt.
 - If tests are started from **TestRunner** class (which is inside cucumberRunner.Runner), then results will be available at **target/site/serenity/index.html**
